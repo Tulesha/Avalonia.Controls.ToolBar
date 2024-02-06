@@ -1,0 +1,87 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tabs="clr-namespace:Avalonia.Controls.ToolBar.Demo.ViewModels.Tabs"
+             xmlns:controls="clr-namespace:Avalonia.Controls.ToolBar.Controls;assembly=Avalonia.Controls.ToolBar"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="tabs:ToolBarTrayTabViewModel"
+             x:Class="Avalonia.Controls.ToolBar.Demo.Views.Tabs.ToolBarTrayTabView">
+
+    <UserControl.Styles>
+        <Style Selector="controls|ToolBar">
+            <Setter Property="Header" Value="{Binding Header}" />
+            <Setter Property="Orientation" Value="{Binding Orientation}" />
+            <Setter Property="ItemsSource" Value="{Binding Items}" />
+            <Setter Property="Band" Value="{Binding Band}" />
+            <Setter Property="BandIndex" Value="{Binding BandIndex}" />
+        </Style>
+    </UserControl.Styles>
+
+    <Grid ColumnDefinitions="*, *"
+          RowDefinitions="Auto, Auto, 20, Auto">
+
+        <StackPanel Grid.Column="0"
+                    Grid.Row="0"
+                    Spacing="5">
+            <Label Content="Control items example"
+                   FontSize="16" />
+
+            <StackPanel Orientation="Horizontal"
+                        Spacing="5">
+                <CheckBox Content="Is Vertical"
+                          IsChecked="{Binding IsVertical1}" />
+                <CheckBox Content="Is Enabled"
+                          IsChecked="{Binding IsEnabled1}" />
+                <CheckBox Content="Is Locked"
+                          IsChecked="{Binding IsLocked1}" />
+                <Button Name="AddToolBar1"
+                        Content="Add new ToolBar"
+                        Click="AddToolBar1_OnClick" />
+                <Button Name="RemoveToolBar1"
+                        Content="Remove ToolBar"
+                        Click="RemoveToolBar1_OnClick" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="0"
+                    Spacing="5">
+            <Label Content="ViewModel items example"
+                   FontSize="16" />
+
+            <StackPanel Orientation="Horizontal"
+                        Spacing="5">
+                <CheckBox Content="Is Vertical"
+                          IsChecked="{Binding IsVertical2}" />
+                <CheckBox Content="Is Enabled"
+                          IsChecked="{Binding IsEnabled2}" />
+                <CheckBox Content="Is Locked"
+                          IsChecked="{Binding IsLocked2}" />
+                <Button Name="AddToolBar2"
+                        Content="Add new ToolBar"
+                        Click="AddToolBar2_OnClick" />
+                <Button Name="RemoveToolBar2"
+                        Content="Remove ToolBar"
+                        Click="RemoveToolBar2_OnClick" />
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Column="0"
+              Grid.Row="1"
+              Grid.ColumnSpan="2"
+              ColumnDefinitions="*, 5, *">
+            <controls:ToolBarTray Name="ToolBarTray1"
+                                  Grid.Column="0"
+                                  IsEnabled="{Binding ToolBarTrayViewModel1.IsEnabled}"
+                                  IsLocked="{Binding ToolBarTrayViewModel1.IsLocked}"
+                                  Orientation="{Binding ToolBarTrayViewModel1.Orientation}" />
+
+            <controls:ToolBarTray Name="ToolBarTray2"
+                                  Grid.Column="2"
+                                  IsEnabled="{Binding ToolBarTrayViewModel2.IsEnabled}"
+                                  IsLocked="{Binding ToolBarTrayViewModel2.IsLocked}"
+                                  Orientation="{Binding ToolBarTrayViewModel2.Orientation}" />
+        </Grid>
+    </Grid>
+</UserControl>

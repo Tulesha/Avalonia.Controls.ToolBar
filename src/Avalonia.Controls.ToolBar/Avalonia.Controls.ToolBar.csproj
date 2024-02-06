@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>$(LtsTargetFramework)</TargetFramework>
+        <LangVersion>$(LtsLangVersion)</LangVersion>
+        <Nullable>$(Nullable)</Nullable>
+        <ImplicitUsings>$(ImplicitUsings)</ImplicitUsings>
+        <WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>
+        <Description>Port of WPF ToolBar, ToolBarPanel, ToolBarOverflowPanel, ToolBarTray controls</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Themes\Assets\" />
+    </ItemGroup>
+</Project>

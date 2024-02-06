@@ -1,0 +1,12 @@
+﻿<Project>
+    <PropertyGroup>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <WarningsAsErrors>nullable</WarningsAsErrors>
+        <LtsTargetFramework>net7.0</LtsTargetFramework>
+        <LtsLangVersion>latest</LtsLangVersion>
+    </PropertyGroup>
+    <PropertyGroup>
+        <AvaloniaVersion>11.0.7</AvaloniaVersion>
+    </PropertyGroup>
+</Project>

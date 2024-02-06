@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Avalonia.Controls.ToolBar.Demo.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:tabs="clr-namespace:Avalonia.Controls.ToolBar.Demo.Views.Tabs"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalonia.Controls.ToolBar.Demo.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Avalonia.Controls.ToolBar.Demo">
+
+    <DockPanel>
+        <ComboBox x:Name="ThemeVariants"
+                  DockPanel.Dock="Top"
+                  HorizontalAlignment="Right"
+                  Margin="5">
+            <ComboBox.Items>
+                <ThemeVariant>Default</ThemeVariant>
+                <ThemeVariant>Light</ThemeVariant>
+                <ThemeVariant>Dark</ThemeVariant>
+            </ComboBox.Items>
+        </ComboBox>
+
+        <TabControl>
+            <TabItem Header="ToolBar">
+                <tabs:ToolBarTabView />
+            </TabItem>
+
+            <TabItem Header="ToolBarTray">
+                <tabs:ToolBarTrayTabView />
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

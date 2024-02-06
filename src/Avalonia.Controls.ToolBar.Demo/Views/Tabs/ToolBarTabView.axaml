@@ -1,0 +1,98 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:Avalonia.Controls.ToolBar.Controls;assembly=Avalonia.Controls.ToolBar"
+             xmlns:tabs="clr-namespace:Avalonia.Controls.ToolBar.Demo.ViewModels.Tabs"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="tabs:ToolBarTabViewModel"
+             x:Class="Avalonia.Controls.ToolBar.Demo.Views.Tabs.ToolBarTabView">
+
+    <Grid ColumnDefinitions="*, *"
+          RowDefinitions="Auto, Auto, 20, Auto">
+
+        <StackPanel Grid.Column="0"
+                    Grid.Row="0"
+                    Spacing="5">
+            <Label Content="Control items example"
+                   FontSize="16" />
+
+            <StackPanel Orientation="Horizontal"
+                        Spacing="5">
+                <CheckBox Content="Is Vertical"
+                          IsChecked="{Binding IsVertical1}" />
+                <CheckBox Content="Is Enabled"
+                          IsChecked="{Binding IsEnabled1}" />
+                <Menu>
+                    <MenuItem Header="Add new item">
+                        <MenuItem Header="Button"
+                                  Command="{Binding AddNewButtonCommand}" />
+                        <MenuItem Header="Toggle"
+                                  Command="{Binding AddNewToggleCommand}" />
+                        <MenuItem Header="Menu"
+                                  Command="{Binding AddNewMenuCommand}" />
+                    </MenuItem>
+                </Menu>
+                <Button Content="Remove item"
+                        Command="{Binding RemoveItemCommand}" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="0"
+                    Spacing="5">
+            <Label Content="ViewModel items example"
+                   FontSize="16" />
+
+            <StackPanel Orientation="Horizontal"
+                        Spacing="5">
+                <CheckBox Content="Is Vertical"
+                          IsChecked="{Binding IsVertical2}" />
+                <CheckBox Content="Is Enabled"
+                          IsChecked="{Binding IsEnabled2}" />
+                <Button Content="Add new ViewModel item"
+                        Command="{Binding AddNewViewModelItemCommand}" />
+                <Button Content="Remove ViewModel item"
+                        Command="{Binding RemoveViewModelItemCommand}" />
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Column="0"
+              Grid.Row="1"
+              Grid.ColumnSpan="2"
+              ColumnDefinitions="*, 5, *">
+
+            <Grid.Styles>
+                <Style Selector="Button">
+                    <Setter Property="Command" Value="{Binding PressedElementCommand}" />
+                    <Setter Property="CommandParameter" Value="{Binding $self.Content}" />
+                </Style>
+
+                <Style Selector="MenuItem">
+                    <Setter Property="Command" Value="{Binding PressedElementCommand}" />
+                    <Setter Property="CommandParameter" Value="{Binding $self.Header}" />
+                </Style>
+            </Grid.Styles>
+
+            <controls:ToolBar Grid.Column="0"
+                              ItemsSource="{Binding ToolBarViewModel1.Items}"
+                              Orientation="{Binding ToolBarViewModel1.Orientation}"
+                              IsEnabled="{Binding ToolBarViewModel1.IsEnabled}"
+                              HorizontalAlignment="Left" />
+
+            <GridSplitter Grid.Column="1"
+                          BorderThickness="1"
+                          BorderBrush="{DynamicResource SystemAccentColor}" />
+
+            <controls:ToolBar Grid.Column="2"
+                              ItemsSource="{Binding ToolBarViewModel2.Items}"
+                              Orientation="{Binding ToolBarViewModel2.Orientation}"
+                              IsEnabled="{Binding ToolBarViewModel2.IsEnabled}"
+                              HorizontalAlignment="Left" />
+        </Grid>
+
+        <TextBlock Grid.Column="0"
+                   Grid.Row="3"
+                   Text="{Binding PressedElementName}"/>
+    </Grid>
+</UserControl>
