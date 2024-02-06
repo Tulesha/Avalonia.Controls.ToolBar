@@ -5,7 +5,15 @@
         <Nullable>$(Nullable)</Nullable>
         <ImplicitUsings>$(ImplicitUsings)</ImplicitUsings>
         <WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>
+
+        <Version>0.0.1</Version>
+        <Authors>Tulesha</Authors>
+        <Product>Avalonia.Controls.ToolBar</Product>
         <Description>Port of WPF ToolBar, ToolBarPanel, ToolBarOverflowPanel, ToolBarTray controls</Description>
+        <RepositoryUrl>https://github.com/Tulesha/Avalonia.Controls.ToolBar</RepositoryUrl>
+        <PackageId>Avalonia.Controls.ToolBar</PackageId>
+        <PackageTags>Avalonia,ToolBar,ToolBarTray</PackageTags>
+        <PackageLicenseUrl>https://github.com/Tulesha/Avalonia.Controls.ToolBar/blob/main/LICENSE</PackageLicenseUrl>
     </PropertyGroup>
 
     <ItemGroup>
