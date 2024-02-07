@@ -9,4 +9,13 @@
     <PropertyGroup>
         <AvaloniaVersion>11.0.7</AvaloniaVersion>
     </PropertyGroup>
+    <PropertyGroup>
+        <Version>0.0.1</Version>
+        <Authors>Tulesha</Authors>
+        <Product>Avalonia.Controls.ToolBar</Product>
+        <Description>ToolBar and ToolBarTray controls for Avalonia (port of WPF)</Description>
+        <RepositoryUrl>https://github.com/Tulesha/Avalonia.Controls.ToolBar</RepositoryUrl>
+        <PackageId>AvaloniaControlsToolBar</PackageId>
+        <PackageTags>Avalonia,ToolBar,ToolBarTray</PackageTags>
+    </PropertyGroup>
 </Project>

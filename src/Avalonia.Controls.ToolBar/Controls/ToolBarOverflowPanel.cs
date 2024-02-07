@@ -15,10 +15,16 @@ public class ToolBarOverflowPanel : Panel
 
     #region WrapWidth
 
+    /// <summary>
+    /// Defines the <see cref="WrapWidth"/> Property
+    /// </summary>
     public static readonly StyledProperty<double> WrapWidthProperty =
         AvaloniaProperty.Register<ToolBarOverflowPanel, double>(nameof(WrapWidth), Double.NaN,
             validate: IsWrapWidthValid);
 
+    /// <summary>
+    /// Get or set wrap width
+    /// </summary>
     public double WrapWidth
     {
         get => GetValue(WrapWidthProperty);

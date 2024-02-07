@@ -15,7 +15,6 @@ public class ToolBarPanel : StackPanel, IDisposable
     private Avalonia.Controls.Controls? _generatedItemsCollection;
     private ToolBar? _toolBar;
 
-
     #region ItemIsOwnContainerProperty
 
     private static readonly AttachedProperty<bool> ItemIsOwnContainerProperty =

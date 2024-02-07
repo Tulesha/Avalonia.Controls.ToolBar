@@ -56,6 +56,9 @@ public class ToolBar : HeaderedItemsControl
 
     #region Orientation
 
+    /// <summary>
+    /// Defines the <see cref="Orientation"/> Property
+    /// </summary>
     public static readonly StyledProperty<Orientation> OrientationProperty =
         AvaloniaProperty.Register<ToolBar, Orientation>(nameof(Orientation), inherits: true,
             coerce: CoerceOrientation);
@@ -66,6 +69,9 @@ public class ToolBar : HeaderedItemsControl
         return toolBarTray != null ? toolBarTray.Orientation : value;
     }
 
+    /// <summary>
+    /// Get or set the orientation
+    /// </summary>
     public Orientation Orientation
     {
         get => GetValue(OrientationProperty);
@@ -76,8 +82,14 @@ public class ToolBar : HeaderedItemsControl
 
     #region Band
 
+    /// <summary>
+    /// Defines the <see cref="Band"/> Property
+    /// </summary>
     public static readonly StyledProperty<int> BandProperty = AvaloniaProperty.Register<ToolBar, int>(nameof(Band));
 
+    /// <summary>
+    /// Get or set the band
+    /// </summary>
     public int Band
     {
         get => GetValue(BandProperty);
@@ -88,9 +100,15 @@ public class ToolBar : HeaderedItemsControl
 
     #region BandIndex
 
+    /// <summary>
+    /// Defines the <see cref="BandIndex"/> Property
+    /// </summary>
     public static readonly StyledProperty<int> BandIndexProperty =
         AvaloniaProperty.Register<ToolBar, int>(nameof(BandIndex));
 
+    /// <summary>
+    /// Get or set the band index
+    /// </summary>
     public int BandIndex
     {
         get => GetValue(BandIndexProperty);
@@ -101,10 +119,16 @@ public class ToolBar : HeaderedItemsControl
 
     #region IsOverflowOpen
 
+    /// <summary>
+    /// Defines the <see cref="IsOverflowOpen"/> Property
+    /// </summary>
     public static readonly StyledProperty<bool> IsOverflowOpenProperty =
         AvaloniaProperty.Register<ToolBar, bool>(nameof(IsOverflowOpen), defaultBindingMode: BindingMode.TwoWay,
             coerce: CoerceIsOverflowOpen);
 
+    /// <summary>
+    /// Get or set is ToolBar overflow menu open
+    /// </summary>
     public bool IsOverflowOpen
     {
         get => GetValue(IsOverflowOpenProperty);
@@ -140,9 +164,15 @@ public class ToolBar : HeaderedItemsControl
 
     #region HasOverflowItems
 
+    /// <summary>
+    /// Defines the <see cref="HasOverflowItems"/> Property
+    /// </summary>
     public static readonly StyledProperty<bool> HasOverflowItemsProperty =
         AvaloniaProperty.Register<ToolBar, bool>(nameof(HasOverflowItems));
 
+    /// <summary>
+    /// Get or set has ToolBar overflow items
+    /// </summary>
     public bool HasOverflowItems
     {
         get => GetValue(HasOverflowItemsProperty);
@@ -153,9 +183,15 @@ public class ToolBar : HeaderedItemsControl
 
     #region IsOverflowItem
 
+    /// <summary>
+    /// Defines the <see cref="IsOverflowItem"/> Property
+    /// </summary>
     public static readonly StyledProperty<bool> IsOverflowItemProperty =
         AvaloniaProperty.Register<ToolBar, bool>(nameof(IsOverflowItem), false, inherits: true);
 
+    /// <summary>
+    /// Get or set is item overflow
+    /// </summary>
     public bool IsOverflowItem
     {
         get => GetValue(IsOverflowItemProperty);
@@ -177,10 +213,16 @@ public class ToolBar : HeaderedItemsControl
 
     #region OverflowMode
 
+    /// <summary>
+    /// Defines the <see cref="OverflowMode"/> Property
+    /// </summary>
     public static readonly StyledProperty<OverflowMode> OverflowModeProperty =
         AvaloniaProperty.Register<ToolBar, OverflowMode>(nameof(OverflowMode), OverflowMode.AsNeeded,
             validate: IsValidOverflowMode);
 
+    /// <summary>
+    /// Get or set overflow mode
+    /// </summary>
     public OverflowMode OverflowMode
     {
         get => GetValue(OverflowModeProperty);

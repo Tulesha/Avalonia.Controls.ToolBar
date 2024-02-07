@@ -6,13 +6,13 @@
         <ImplicitUsings>$(ImplicitUsings)</ImplicitUsings>
         <WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>
 
-        <Version>0.0.1</Version>
-        <Authors>Tulesha</Authors>
-        <Product>Avalonia.Controls.ToolBar</Product>
-        <Description>Port of WPF ToolBar, ToolBarPanel, ToolBarOverflowPanel, ToolBarTray controls</Description>
-        <RepositoryUrl>https://github.com/Tulesha/Avalonia.Controls.ToolBar</RepositoryUrl>
-        <PackageId>Tulesha.Avalonia.Controls.ToolBar</PackageId>
-        <PackageTags>Avalonia,ToolBar,ToolBarTray</PackageTags>
+        <Version>$(Version)</Version>
+        <Authors>$(Authors)</Authors>
+        <Product>$(Product)</Product>
+        <Description>$(Description)</Description>
+        <RepositoryUrl>$(RepositoryUrl)</RepositoryUrl>
+        <PackageId>$(PackageId)</PackageId>
+        <PackageTags>$(PackageTags)</PackageTags>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE</PackageLicenseFile >
     </PropertyGroup>
