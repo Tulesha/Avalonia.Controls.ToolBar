@@ -27,8 +27,8 @@ ToolBar and ToolBarTray controls for Avalonia (port of WPF)
 
 ## ToolBar.Demo
 
-![](https://github.com/Tulesha/Avalonia.Controls.ToolBar/.github/workflows/ToolBarSample.gif)
+![](https://github.com/Tulesha/Avalonia.Controls.ToolBar/blob/main/.github/workflows/ToolBarSample.gif)
 
 ## ToolBarTray.Demo
 
-![](https://github.com/Tulesha/Avalonia.Controls.ToolBar/.github/workflows/ToolBarTraySample.gif)
+![](https://github.com/Tulesha/Avalonia.Controls.ToolBar/blob/main/.github/workflows/ToolBarTraySample.gif)
