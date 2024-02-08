@@ -1,5 +1,7 @@
 # Avalonia.Controls.ToolBar
 
+[![NuGet](https://img.shields.io/nuget/v/AvaloniaControlsToolBar)](https://www.nuget.org/packages/AvaloniaControlsToolBar) [![downloads](https://img.shields.io/nuget/dt/AvaloniaControlsToolBar)](https://www.nuget.org/packages/AvaloniaControlsToolBar)
+
 ## Description
 
 ToolBar and ToolBarTray controls for Avalonia (port of WPF)
