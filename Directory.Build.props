@@ -15,7 +15,6 @@
         <Product>Avalonia.Controls.ToolBar</Product>
         <Description>ToolBar and ToolBarTray controls for Avalonia (port of WPF)</Description>
         <RepositoryUrl>https://github.com/Tulesha/Avalonia.Controls.ToolBar</RepositoryUrl>
-        <PackageId>AvaloniaControlsToolBar</PackageId>
         <PackageTags>Avalonia,ToolBar,ToolBarTray</PackageTags>
     </PropertyGroup>
 </Project>
