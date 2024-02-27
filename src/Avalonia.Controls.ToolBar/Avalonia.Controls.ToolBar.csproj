@@ -11,7 +11,7 @@
         <Product>$(Product)</Product>
         <Description>$(Description)</Description>
         <RepositoryUrl>$(RepositoryUrl)</RepositoryUrl>
-        <PackageId>$(PackageId)</PackageId>
+        <PackageId>AvaloniaControlsToolBar</PackageId>
         <PackageTags>$(PackageTags)</PackageTags>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE</PackageLicenseFile >
